@@ -43,9 +43,6 @@ jobs:
         testPlanKey: "XRAYD-138"
         continueOnImportError: true
         projectKey: "XRAYD"
-    - uses: ./
-      env:
-        EXIT_CODE_FROM_REPORT: "True"
-        SLACK_CHANNEL: C02KK1FTFU6
-        SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-        XUNIT_PATH: ~/junit.xml
+    - uses: pullreminders/slack-action@master
+      with:
+       args: '{\"channel\":\"C02KK1FTFU6\",\"text\":\"Hello world\"}'
