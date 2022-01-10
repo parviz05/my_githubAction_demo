@@ -49,4 +49,4 @@ jobs:
 #         EXIT_CODE_FROM_REPORT: "True"
         SLACK_CHANNEL: C02TFU4Q4H2
         SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-        XUNIT_PATH: home/junit.xml
+        XUNIT_PATH: "home/junit.xml"
