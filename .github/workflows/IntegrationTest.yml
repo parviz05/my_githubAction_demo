@@ -33,16 +33,16 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test || true
-    - uses: mikepenz/xray-action@v0.9.4
-      with:
-        username: ${{ secrets.client_id }}
-        password: ${{ secrets.client_secret }}
-        testFormat: "junit"
-        testPaths: "junit.xml"
-       # testExecKey: "XRAYD-14"
-        testPlanKey: "XRAYD-138"
-        continueOnImportError: true
-        projectKey: "XRAYD"
+#     - uses: mikepenz/xray-action@v0.9.4
+#       with:
+#         username: ${{ secrets.client_id }}
+#         password: ${{ secrets.client_secret }}
+#         testFormat: "junit"
+#         testPaths: "junit.xml"
+#        # testExecKey: "XRAYD-14"
+#         testPlanKey: "XRAYD-138"
+#         continueOnImportError: true
+#         projectKey: "XRAYD"
 #     - name: API Automation Result
 #       uses: ivanklee86/xunit-slack-reporter@v1.4.0
 #       with:
