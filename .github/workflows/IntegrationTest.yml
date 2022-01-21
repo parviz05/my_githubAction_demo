@@ -64,7 +64,7 @@ jobs:
         # Required mail subject:
         subject: Github Actions job result
         # Required recipients' addresses:
-        to: alas.parviz@gmail.com,palasgarov@fortresstech.net
+        to: alas.parviz@gmail.com,alasapplainces@gmail.com
         # Required sender full name (address can be skipped):
         from: Luke Skywalker # <user@example.com>
         # Optional whether this connection use TLS (default is true if server_port is 465)
