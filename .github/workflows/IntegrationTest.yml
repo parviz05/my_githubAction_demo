@@ -54,17 +54,17 @@ jobs:
       uses: dawidd6/action-send-mail@v3
       with:
         # Required mail server address:
-        server_address: fortresstech.net
+        server_address: gmail.com
         # Required mail server port:
-        server_port: 443
+        server_port: 993
         # Optional (recommended): mail server username:
-        username: ${{secrets.MAIL_USERNAME}}
-        # Optional (recommended) mail server password:
-        password: ${{secrets.MAIL_PASSWORD}}
+#         username: ${{secrets.MAIL_USERNAME}}
+#         # Optional (recommended) mail server password:
+#         password: ${{secrets.MAIL_PASSWORD}}
         # Required mail subject:
         subject: Github Actions job result
         # Required recipients' addresses:
-        to: palasgarov@fortresstech.net
+        to: alas.parviz@gmail.com
         # Required sender full name (address can be skipped):
         from: Luke Skywalker # <user@example.com>
         # Optional whether this connection use TLS (default is true if server_port is 465)
