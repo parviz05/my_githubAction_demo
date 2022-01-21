@@ -33,13 +33,32 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test:sanitySuite || true
-    - uses: mikepenz/xray-action@v0.9.4
+#     - uses: mikepenz/xray-action@v0.9.4
+#       with:
+#         username: ${{ secrets.client_id }}
+#         password: ${{ secrets.client_secret }}
+#         testFormat: "junit"
+#         testPaths: "junit.xml"
+#        # testExecKey: "XRAYD-14"
+#         testPlanKey: "XRAYD-12"
+#         continueOnImportError: true
+#         projectKey: "XRAYD"
+    - name: Send mail
+      if: always()
+      uses: dawidd6/action-send-mail@v2
       with:
-        username: ${{ secrets.client_id }}
-        password: ${{ secrets.client_secret }}
-        testFormat: "junit"
-        testPaths: "junit.xml"
-       # testExecKey: "XRAYD-14"
-        testPlanKey: "XRAYD-12"
-        continueOnImportError: true
-        projectKey: "XRAYD"
+        # mail server settings
+        server_address: smtp.mailgun.org
+        server_port: 465
+        # user credentials
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        # email subject
+        subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+        # email body as text
+#         body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+        body: "Hello"
+        # comma-separated string, send email to
+        to: alas.parviz@gmail.com,palasgarov@fortresstech.net
+        # from email name
+        from: Parviz A
