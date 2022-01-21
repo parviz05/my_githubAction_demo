@@ -54,9 +54,9 @@ jobs:
       uses: dawidd6/action-send-mail@v3
       with:
         # Required mail server address:
-        server_address: imap.gmail.com
+        server_address: https://outlook.office365.com/EWS/Exchange.asmx
         # Required mail server port:
-        server_port: 993
+        server_port: 443
         # Optional (recommended): mail server username:
         username: ${{secrets.MAIL_USERNAME}}
         # Optional (recommended) mail server password:
@@ -64,7 +64,7 @@ jobs:
         # Required mail subject:
         subject: Github Actions job result
         # Required recipients' addresses:
-        to: alas.parviz@gmail.com
+        to: palasgarov@fortresstech.net
         # Required sender full name (address can be skipped):
         from: Luke Skywalker # <user@example.com>
         # Optional whether this connection use TLS (default is true if server_port is 465)
