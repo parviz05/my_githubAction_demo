@@ -54,7 +54,7 @@ jobs:
       uses: dawidd6/action-send-mail@v3
       with:
         # Required mail server address:
-        server_address: https://outlook.office365.com/EWS/Exchange.asmx
+        server_address: fortresstech.net
         # Required mail server port:
         server_port: 443
         # Optional (recommended): mail server username:
